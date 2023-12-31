@@ -20,6 +20,11 @@ namespace BulkyBook.Models
         [Required]
         public string Author { get; set; }
         [Required]
+        public string Chapter { get; set; } = "Chapter 1: Prologue";
+
+        [Required]
+        public double Rating { get; set; } = 4.1;
+        [Required]
         [Range(1, 10000)]
         [Display(Name = "List Price")]
         public double ListPrice { get; set; }

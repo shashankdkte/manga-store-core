@@ -15,11 +15,13 @@
 	<link rel="stylesheet" href="//cdn.datatables.net/1.11.2/css/jquery.dataTables.min.css" />
 </head>
 <body>
+	
 		<nav class="navbar navbar-expand-lg">
 			<div class="container-fluid">
 				<div class="logo-container">
 					<div class="img-logo">
-						<img  src="~/images/book.png" alt="logo"/>
+					<img src="~/images/book.png" alt="logo"/>
+
 					</div>
 					<a class="navbar-brand" href="#">MANGAFOX</a>
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
@@ -78,17 +80,41 @@
 						@*<button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>*@
 					</form>
 					<partial name="_LoginPartial" />
-					
+
 					@*<div class="search-box-container">
-						<input type="search" name="search" id="search" placeholder="Search favourite comic">
+					<input type="search" name="search" id="search" placeholder="Search favourite comic">
 					</div>*@
 				</div>
 			</div>
 			</>
 		</nav>
 
-	
 	<div class="container">
+		<section class="hero-container">
+			<div class="summary-text">
+				Who strives to become a demon slayer after his family was slaughtered and his younger sister Nezuko turned into
+				a demon
+			</div>
+			<div class="main-anime-intro">
+				<p class="small">ADVENTURE;DARK FANTASY;MARTIAL ARTS;</p>
+				<div class="name-container">
+					<h1>DEMON SLAYER :</h1>
+					<h1>KIMETSU NO YAIBA</h1>
+
+				</div>
+				<div class="main-manga-image">
+					<img src="https://cdna.artstation.com/p/assets/images/images/045/842/536/large/ryuuto-teste.jpg?1643670907"
+						 alt="">
+				</div>
+			</div>
+			<div class="read-section">
+				<button class="primary-btn">Read Now</button>
+				<div class="chapter-container">
+					<div class="chapter-img"></div>
+					<p>Ch.205</p>
+				</div>
+			</div>
+		</section>
 		<main role="main" class="pb-3">
 			<partial name="_Notification" />
 			@RenderBody()

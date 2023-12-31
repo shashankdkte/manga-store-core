@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BulkyBook.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20231207110130_Initial Commit")]
-    partial class InitialCommit
+    [Migration("20231231152246_ToProd")]
+    partial class ToProd
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -218,6 +218,10 @@ namespace BulkyBook.DataAccess.Migrations
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Chapter")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("CoverTypeId")
                         .HasColumnType("int");
 
@@ -243,6 +247,9 @@ namespace BulkyBook.DataAccess.Migrations
                         .HasColumnType("float");
 
                     b.Property<double>("Price50")
+                        .HasColumnType("float");
+
+                    b.Property<double>("Rating")
                         .HasColumnType("float");
 
                     b.Property<string>("Title")
